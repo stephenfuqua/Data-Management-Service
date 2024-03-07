@@ -25,6 +25,8 @@ public class EndpointsTests
         var response = await client.GetAsync("/api/ping");
         var content = await response.Content.ReadAsStringAsync();
 
+        Assert.Fail("Testing the publish-unit-test-result-action");
+        
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
         content.Should().Contain(expectedDate);
