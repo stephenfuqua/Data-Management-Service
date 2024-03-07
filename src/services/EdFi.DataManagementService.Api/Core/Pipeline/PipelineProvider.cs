@@ -22,6 +22,8 @@ public class PipelineProvider(List<IPipelineStep> _steps)
     /// </summary>
     private async Task RunInternal(int stepIndex, PipelineContext context)
     {
+        if (_steps.Count == 0) { throw new InvalidOperationException("Testing the results reporter"); }
+        
         if (_steps.Count > stepIndex)
         {
             await _steps[stepIndex].Execute(context, () => RunInternal(stepIndex + 1, context));
