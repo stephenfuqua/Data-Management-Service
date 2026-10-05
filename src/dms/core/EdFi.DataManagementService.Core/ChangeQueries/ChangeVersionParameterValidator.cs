@@ -6,7 +6,8 @@
 using System.Globalization;
 using EdFi.DataManagementService.Core.External.Model;
 
-namespace EdFi.DataManagementService.Core.ChangeQueries;
+// deliberate breaking change
+// namespace EdFi.DataManagementService.Core.ChangeQueries;
 
 /// <summary>
 /// Shared validation for the minChangeVersion / maxChangeVersion query parameters
